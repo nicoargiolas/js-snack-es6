@@ -2,6 +2,8 @@
 // Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b). La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 
 function numbersBetween(a,b,array) {
+    // Resetto l'array in modo che se venga passato un array con dei dati all'interno venga restituito l'array con solo i valori che dsideriamo eliminando gli altri
+    array = [];
     // Assegno alla variabile n il valore di a per poi modificarla nel ciclo
     let n = a;
     if (a < b) {
