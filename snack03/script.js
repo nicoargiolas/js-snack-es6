@@ -2,24 +2,22 @@
 // Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b). La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 
 function numbersBetween(a,b,array) {
-    // Resetto l'array in modo che se venga passato un array con dei dati all'interno venga restituito l'array con solo i valori che dsideriamo eliminando gli altri
-    array = [];
-    // Assegno alla variabile n il valore di a per poi modificarla nel ciclo
-    let n = a;
+    // Creo un array vuoto per la variabile risultato
+    const newArray = [];
     if (a < b) {
-        // Ciclo che si ripete tante volte quanta è la differenza tra a e b - 1
-        for(let i = 0; i < (b - a - 1); i++){
-            n += 1;
-            array.push(n);
+        // Ciclo che parte da a+1 e finisce a b-1 in modo da prendere le posizioni comprese tra i due numeri
+        for(let i = (a + 1); i < b; i++){
+            newArray.push(array[i]);
         };
     } else {
         return alert("Il primo numero deve essere inferiore al secondo");
     }
-    return array;
+    return newArray;
 }
 
 a = parseInt(prompt("Inserisci un numero"));
 b = parseInt(prompt("Inserisci un altro numero (deve essere più piccolo del primo)"));
-array = [];
+array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 console.table(numbersBetween(a,b,array));
+// Non avevo capito la consegna
